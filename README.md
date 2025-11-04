@@ -36,6 +36,18 @@ Before running the miner, ensure you have the following:
     ```
     The miner works without this package using built-in platform-specific file locking, but installing `portalocker` provides more robust cross-platform file locking.
 
+## Developer Donations
+
+This miner includes an **optional 5% donation system** to support ongoing development and maintenance. By default, approximately 1 in 20 (5%) of solved challenges will be mined for the developer's address.
+
+
+To disable donations, add the `--no-donation` flag:
+```bash
+python miner.py --no-donation
+```
+
+Thank you for considering supporting this project!
+
 ## Usage
 
 You can run the miner from your terminal.
@@ -52,6 +64,7 @@ You can run the miner from your terminal.
     python miner.py --workers <number of workers>
     ```
     ⚠️ Each worker typically uses one CPU core, and 1GB of RAM. Do not run more workers than your system is capable of.
+
 
 
 ## Exporting Wallets
@@ -73,25 +86,29 @@ To access your earned NIGHT tokens, you will need to import your wallets' signin
 
 The dashboard displays important information about the status of each worker. The `Challenge` column shows which challenge ID the worker is trying to solve. It also shows statuses if not actively mining, for example "Waiting" if all known challenges have been completed. `Completed` shows how many solutions have been sucessfully submitted (and verified) by the server. `NIGHT` is an estimation of the rewards each wallet will receive. This is updated every 24 hours.
 
+If developer donations are enabled (default), when a worker is mining for the developer, the `Address` field for that worker will temporarily show **"developer (thank you!)"** instead of the wallet address.
+
 ```
 ==============================================================================================================
-                                    MIDNIGHT MULTI-WALLET MINER DASHBOARD                                     
+                                    MIDNIGHT MULTI-WALLET MINER DASHBOARD
 ==============================================================================================================
 Active Workers: 6 | Last Update: 2025-11-03 19:22:11
 ==============================================================================================================
 
-ID   Address                                      Challenge            Attempts   H/s      Completed  NIGHT     
+ID   Address                                      Challenge            Attempts   H/s      Completed  NIGHT
 --------------------------------------------------------------------------------------------------------------
-0    addr1vxask5vpp8p4xddsc3qd63luy4ecf67233...   **D05C02             470,000    204      4          0         
-1    addr1v43qjfemmksg5yjysevyndfqs7zpmad8yy...   **D05C19             471,000    204      8          7.043     
-2    addr1v9hcpxeevkks7g4mvyls029yuvvsm0dfzl...   **D05C20             48,000     203      5          0         
-3    addr1vx64c8703ketwnjtxkjcqzsktwkcvhve7f...   **D05C20             154,000    203      7          3.522     
-4    addr1vxh3ckvkena0hzm24fhj9ac9ezrjz5ufju...   **D05C03             20,000     203      5          0         
-5    addr1v8ugwtuwyqwh42ejd5af6f5tvzpjt4m5r2...   **D05C18             316,000    203      2          0         
+0    addr1vxask5vpp8p4xddsc3qd63luy4ecf67233...   **D05C02             470,000    204      4          0
+1    developer (thank you!)                       **D05C19             471,000    204      8          7.043
+2    addr1v9hcpxeevkks7g4mvyls029yuvvsm0dfzl...   **D05C20             48,000     203      5          0
+3    addr1vx64c8703ketwnjtxkjcqzsktwkcvhve7f...   **D05C20             154,000    203      7          3.522
+4    addr1vxh3ckvkena0hzm24fhj9ac9ezrjz5ufju...   **D05C03             20,000     203      5          0
+5    addr1v8ugwtuwyqwh42ejd5af6f5tvzpjt4m5r2...   **D05C18             316,000    203      2          0
 --------------------------------------------------------------------------------------------------------------
-TOTAL                                                                              1221     31         10.565    
+TOTAL                                                                              1221     31         10.565
 ==============================================================================================================
 
 Press Ctrl+C to stop all miners
 ```
+
+In the example above, worker #1 is currently mining a challenge for the developer.
 
