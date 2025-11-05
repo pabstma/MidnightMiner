@@ -2,7 +2,7 @@
 
 A Python-based mining bot for the Midnight Network's scavenger hunt, allowing users to automatically mine for NIGHT tokens with multiple wallets.
 
-**Cross-platform compatible**: Works on Windows, Linux, and macOS.
+Works on Windows and Linux. Does not support MacOS.
 
 If you are unfamiliar with python, check out the [Easy Guide](EasyGuide.md).
 
