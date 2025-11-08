@@ -156,3 +156,9 @@ The miner automatically detects your operating system and CPU architecture, load
 ## Ashmaize Rust Library Source Code
 
 This miner uses the [Ashmaize](https://github.com/input-output-hk/ce-ashmaize) hashing algorithm, developed by IOHK. Included in this repository are binaries for my python bindings module. You can find the code [here](https://github.com/djeanql/ashmaize-py)
+
+## Stars
+
+If you like MidnightMiner, why not star the repository?
+
+[![Star History Chart](https://api.star-history.com/svg?repos=djeanql/MidnightMiner&type=date&legend=top-left)](https://www.star-history.com/#djeanql/MidnightMiner&type=date&legend=top-left)
